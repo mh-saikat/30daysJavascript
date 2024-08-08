@@ -28,6 +28,7 @@ new Promise(function (resolve, reject) {
   .catch(function (error) {
     console.log(error);
   });
+  
 //Acrivity 2
 //Task 3
 
@@ -141,6 +142,7 @@ const promiseEight = new Promise(function (resolve, reject) {
 Promise.all([promiseSix, promiseSeven, promiseEight]).then(function (value) {
   console.log(value);
 });
+
 //Task 9
 const promise1 = new Promise((resolve, reject) => {
   setTimeout(resolve, 1000, "Slow");
