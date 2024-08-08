@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        .red{
+            width: 250px;
+            height: 250px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+
+    </div>
+</body>
+<script>
+    const red = document.querySelector('.red')
+    red.addEventListener('mouseover',function(e){
+        red.style.backgroundColor = "orange"
+    })
+    red.addEventListener('mouseout',function(e){
+        red.style.backgroundColor = 'red'
+    })
+</script>
+</html>

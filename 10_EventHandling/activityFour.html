@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        form{
+            margin: 25px;
+            padding: 25px;
+        }
+        input{margin-bottom: 10px;}
+        p{margin-left: 50px;}
+    </style>
+</head>
+<body>
+    <form action="" id="logginForm">
+        <h2>Task-7</h2>
+        <label for="name">User Name :</label>
+        <input type="text" id="name" name="Name">
+        <br>
+        <label for="pass">password :</label>
+        <input type="password" id="pass" name="Password">
+        <br>
+        <label for="comPass">Confirm password :</label>
+        <input type="password" id="comPass" name="Confirm password">
+        <br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="Email">
+        <br>
+        <input type="submit">
+    </form>
+    <form>
+        <label for="mySelect">Choose an option:</label>
+            <select id="mySelect">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+            </select>
+    </form>
+    <p id="display">Selected value will appear here.</p>
+</body>
+<script>
+    const form = document.querySelector('#logginForm')
+    form.addEventListener('submit',function(e){
+        e.preventDefault()
+        const formData = new FormData(form)
+        formData.forEach( (value, key) =>{
+            console.log(key + ':' + value);
+        })
+    })
+    //
+    const selectElement = document.querySelector('#mySelect')
+    const displayParagraph = document.querySelector('#display')
+    selectElement.addEventListener('change', function(e){
+        let selectedValue = e.target.value
+        displayParagraph.textContent = `Selected Value: ${selectedValue}`
+    })
+</script>
+</html>

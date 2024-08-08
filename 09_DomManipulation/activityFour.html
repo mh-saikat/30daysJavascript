@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        img{
+            width: 200px;
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="taskSeven">
+        <img  src="persone.jpg" alt="">
+    </div>
+    <h3 class="anything">Add and remove a class</h3>
+</body>
+<script>
+    const image = document.querySelector('img')
+    image.setAttribute('src','persTwo.jpg')
+
+    const classChangeElement = document.querySelector('h3')  
+    classChangeElement.classList.add('classAdd')
+    classChangeElement.classList.remove('classAdd')
+</script>
+</html>

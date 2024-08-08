@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        input{
+            width: 250px;
+            height: 50px;
+            border-radius: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <input class="keyDown" type="text" placeholder="Click a key for keydown event">
+    <br>
+    <input class="keyUp" type="text" placeholder="Click a key for keyup event">
+    <p class="currval"></p>
+
+</body>
+<script>
+    document.querySelector('.keyDown').addEventListener('keydown',function(e){
+        console.log(this.value);
+        // console.log(e.key);
+        
+    })
+    const currval = document.querySelector('.currval')
+    document.querySelector('.keyUp').addEventListener('keyup',function(e){
+        currval.innerHTML = this.value
+        
+    })
+</script>
+</html>

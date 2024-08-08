@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Coordinates Example</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <ul id="languages">
+        <li>Javascript</li>
+        <li>Ruby</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Swift</li>
+    </ul>
+</body>
+<script>
+    const langUl = document.querySelector('#languages')
+    langUl.addEventListener('click', function(e){
+        if (e.target.matches('li')) {
+            e.target.style.color = 'orange'
+            console.log(e.target.textContent);
+        }
+    }) 
+</script>
+</html>

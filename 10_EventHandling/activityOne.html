@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        img{
+            width: 250px;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">CLICK ME!</button>
+    <br>
+    <p>Hi i am MH Saikat.</p>
+    <br>
+    <p>Double click on the image</p>
+    <img src="coffe.jpg" alt="">
+</body>
+<script>
+    const button = document.querySelector('.btn')
+    const pgh = document.querySelector('p')
+    button.addEventListener('click', function(){
+        pgh.textContent = 'I am a Wev Developer.'
+    })
+
+    const img = document.querySelector('img')
+    img.addEventListener('dblclick',function(){
+        img.style.visibility = 'hidden'
+    })
+</script>
+</html>
