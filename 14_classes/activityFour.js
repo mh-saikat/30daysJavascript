@@ -2,10 +2,11 @@ class person {
     constructor(name){
         this.name = name
     }
-
+    //Task 7
     get name(){
         return `${this._name.toUpperCase()}`
     }
+    //Task 8
     set name(value){
         this._name = value
     }
