@@ -20,7 +20,7 @@ console.log(memoizeSquare(4));
 console.log(memoizeSquare(5));
 
 //Task 8
-function createFactorialMenoizer(){
+function createFactorialMemoizer(){
 
     let cache = {};
     function factorial(n){
@@ -39,7 +39,7 @@ function createFactorialMenoizer(){
     }
     return factorial
 }
-const memoizedFactorial = createFactorialMenoizer();
+const memoizedFactorial = createFactorialMemoizer();
 console.log(memoizedFactorial(4));
 console.log(memoizedFactorial(4));
 console.log(memoizedFactorial(5));
